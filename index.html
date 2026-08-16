@@ -21,6 +21,14 @@
     .glow-red {
       box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.35);
     }
+    /* Custom scrollbar for horizontal row swipe */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
   </style>
 </head>
 <body class="antialiased selection:bg-red-600 selection:text-white pb-20 lg:pb-0">
@@ -43,8 +51,8 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative py-10 lg:py-16 border-b border-neutral-800/80">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+  <section class="relative py-8 lg:py-16 border-b border-neutral-800/80">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
       
       <!-- Main Visual Showcase -->
       <div class="space-y-4">
@@ -53,7 +61,7 @@
             Best Seller
           </span>
           <img id="main-product-img" src="earbud-main.jpg" 
-               alt="AirBud Max Pro" class="w-full h-80 sm:h-96 object-cover rounded-xl transition-all duration-300">
+               alt="AirBud Max Pro" class="w-full h-72 sm:h-96 object-cover rounded-xl transition-all duration-300">
         </div>
         
         <!-- Interactive Thumbnails -->
@@ -77,13 +85,13 @@
           <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
             AirBud Max Pro <span class="text-red-600">ENC</span>
           </h1>
-          <p class="text-neutral-400 mt-3 text-sm sm:text-base leading-relaxed">
-            Experience studio-grade acoustics, environmental noise cancellation for HD calling, and ultra-low latency mode engineered for gaming and high-fidelity music streaming.
+          <p class="text-neutral-400 mt-2 text-sm sm:text-base leading-relaxed">
+            Experience studio-grade acoustics, environmental noise cancellation for HD calling, and ultra-low latency mode engineered for gaming.
           </p>
         </div>
 
         <!-- Pricing Card -->
-        <div class="bg-neutral-900/80 border border-neutral-800 p-5 rounded-2xl flex items-center justify-between">
+        <div class="bg-neutral-900/80 border border-neutral-800 p-4 rounded-2xl flex items-center justify-between">
           <div>
             <span class="text-neutral-400 text-xs uppercase font-bold tracking-wider block">Special Promotional Offer</span>
             <div class="flex items-baseline space-x-3 mt-1">
@@ -97,31 +105,31 @@
         </div>
 
         <!-- Highlight Grid -->
-        <div class="grid grid-cols-2 gap-3 text-xs font-bold uppercase tracking-wider text-neutral-300">
-          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+        <div class="grid grid-cols-2 gap-2.5 text-xs font-bold uppercase tracking-wider text-neutral-300">
+          <div class="bg-neutral-900/60 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
             <span class="text-red-500 text-base">🎙️</span> Quad Mic ENC
           </div>
-          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+          <div class="bg-neutral-900/60 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
             <span class="text-red-500 text-base">🔋</span> 40 Hour Battery
           </div>
-          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+          <div class="bg-neutral-900/60 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
             <span class="text-red-500 text-base">⚡</span> 40ms Low Latency
           </div>
-          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+          <div class="bg-neutral-900/60 p-3 rounded-xl border border-neutral-800/80 flex items-center gap-2">
             <span class="text-red-500 text-base">🛡️</span> 3-Day Replacement
           </div>
         </div>
 
         <!-- Trust Badges -->
-        <div class="flex items-center justify-between text-neutral-400 text-xs border-t border-neutral-800/80 pt-4">
-          <div class="flex items-center gap-1.5">
+        <div class="flex items-center justify-between text-neutral-400 text-xs border-t border-neutral-800/80 pt-3">
+          <div class="flex items-center gap-1">
             <span class="text-green-500">✓</span> Open Parcel First
           </div>
-          <div class="flex items-center gap-1.5">
+          <div class="flex items-center gap-1">
             <span class="text-green-500">✓</span> Cash On Delivery
           </div>
-          <div class="flex items-center gap-1.5">
-            <span class="text-green-500">✓</span> 100% Satisfaction
+          <div class="flex items-center gap-1">
+            <span class="text-green-500">✓</span> 100% Guaranteed
           </div>
         </div>
 
@@ -133,41 +141,59 @@
     </div>
   </section>
 
-  <!-- Technical Features Section -->
-  <section class="py-16 bg-neutral-950 border-b border-neutral-800">
+  <!-- RESTRUCTURED COMPACT ROW FEATURES SECTION -->
+  <section class="py-10 bg-neutral-950 border-b border-neutral-800">
     <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center max-w-xl mx-auto mb-12">
-        <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight">Built For Pure Audio Performance</h2>
-        <p class="text-neutral-400 text-sm mt-2">Designed for daily commuters, mobile gamers, and crystal-clear call quality.</p>
+      <div class="text-center max-w-xl mx-auto mb-6">
+        <h2 class="text-xl sm:text-3xl font-black uppercase tracking-tight">Key Audio Features</h2>
+        <p class="text-neutral-400 text-xs sm:text-sm mt-1">Engineered for pure sound, clarity, and performance.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div class="bg-neutral-900/80 p-6 rounded-2xl border border-neutral-800 space-y-3">
-          <div class="w-10 h-10 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-lg">01</div>
-          <h3 class="font-bold text-base text-white uppercase">Quad Mic ENC Cancellation</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">Dual mics in each earbud isolate human voice and cut ambient traffic noise up to 90% during phone calls.</p>
+      <!-- Compact Rows Layout -->
+      <div class="space-y-3 max-w-3xl mx-auto">
+        
+        <!-- Row Item 1 -->
+        <div class="bg-neutral-900/80 p-4 rounded-xl border border-neutral-800 flex items-center gap-4">
+          <div class="w-12 h-12 shrink-0 bg-red-600/10 border border-red-600/30 text-red-500 rounded-xl flex items-center justify-center font-black text-base">
+            01
+          </div>
+          <div>
+            <h3 class="font-extrabold text-sm sm:text-base text-white uppercase">Quad Mic ENC Cancellation</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mt-0.5">Dual mics isolate human voices and cut background noise up to 90% during calls.</p>
+          </div>
         </div>
 
-        <div class="bg-neutral-900/80 p-6 rounded-2xl border border-neutral-800 space-y-3">
-          <div class="w-10 h-10 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-lg">02</div>
-          <h3 class="font-bold text-base text-white uppercase">40ms Gaming Low Latency</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">Triple-tap activation switches to Beast Gaming Mode for lip-sync sound precision in PUBG and Free Fire.</p>
+        <!-- Row Item 2 -->
+        <div class="bg-neutral-900/80 p-4 rounded-xl border border-neutral-800 flex items-center gap-4">
+          <div class="w-12 h-12 shrink-0 bg-red-600/10 border border-red-600/30 text-red-500 rounded-xl flex items-center justify-center font-black text-base">
+            02
+          </div>
+          <div>
+            <h3 class="font-extrabold text-sm sm:text-base text-white uppercase">40ms Low Latency Mode</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mt-0.5">Triple-tap activation switches to Beast Gaming Mode for zero sound lag in PUBG.</p>
+          </div>
         </div>
 
-        <div class="bg-neutral-900/80 p-6 rounded-2xl border border-neutral-800 space-y-3">
-          <div class="w-10 h-10 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-lg">03</div>
-          <h3 class="font-bold text-base text-white uppercase">Type-C Express Charging</h3>
-          <p class="text-neutral-400 text-sm leading-relaxed">Fast charging case gives up to 120 minutes of music playback from a quick 10-minute charge.</p>
+        <!-- Row Item 3 -->
+        <div class="bg-neutral-900/80 p-4 rounded-xl border border-neutral-800 flex items-center gap-4">
+          <div class="w-12 h-12 shrink-0 bg-red-600/10 border border-red-600/30 text-red-500 rounded-xl flex items-center justify-center font-black text-base">
+            03
+          </div>
+          <div>
+            <h3 class="font-extrabold text-sm sm:text-base text-white uppercase">Type-C Express Fast Charge</h3>
+            <p class="text-neutral-400 text-xs leading-relaxed mt-0.5">Get 120 minutes of continuous music playback from a quick 10-minute charge.</p>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- Interactive Order Form -->
-  <section id="order-form" class="py-16 max-w-3xl mx-auto px-4">
-    <div class="bg-neutral-900 border-2 border-red-600/70 rounded-3xl p-6 sm:p-10 shadow-2xl relative glow-red">
+  <section id="order-form" class="py-12 max-w-3xl mx-auto px-4">
+    <div class="bg-neutral-900 border-2 border-red-600/70 rounded-3xl p-5 sm:p-10 shadow-2xl relative glow-red">
       
-      <div class="text-center space-y-2 mb-8">
+      <div class="text-center space-y-1.5 mb-6">
         <span class="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
           Cash On Delivery Nationwide
         </span>
@@ -175,58 +201,58 @@
         <p class="text-neutral-400 text-xs sm:text-sm">Fill in your shipping details below to complete your order via WhatsApp.</p>
       </div>
 
-      <form id="whatsappForm" onsubmit="sendOrderToWhatsApp(event)" class="space-y-4">
+      <form id="whatsappForm" onsubmit="sendOrderToWhatsApp(event)" class="space-y-3.5">
         
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">Full Name *</label>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">Full Name *</label>
           <input type="text" id="customerName" required placeholder="e.g. Muhammad Usman" 
-                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
+                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">WhatsApp Mobile Number *</label>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">WhatsApp Mobile Number *</label>
           <input type="tel" id="customerPhone" required placeholder="e.g. 03080372554" 
-                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
+                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">City *</label>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">City *</label>
           <input type="text" id="customerCity" required placeholder="e.g. Lahore, Islamabad, Karachi" 
-                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
+                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">Complete House Address *</label>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">Complete House Address *</label>
           <textarea id="customerAddress" rows="2" required placeholder="House number, Street, Area/Sector..." 
-                    class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors"></textarea>
+                    class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors"></textarea>
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">Color Variant</label>
-          <select id="productColor" class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-red-600 transition-colors">
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1">Color Variant</label>
+          <select id="productColor" class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-red-600 transition-colors">
             <option value="Matte Black">Matte Black</option>
             <option value="Glossy White">Glossy White</option>
           </select>
         </div>
 
         <!-- Summary -->
-        <div class="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-2 text-sm mt-4">
-          <div class="flex justify-between text-neutral-400">
+        <div class="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-1.5 text-sm mt-3">
+          <div class="flex justify-between text-neutral-400 text-xs">
             <span>AirBud Max Pro (x1)</span>
             <span>Rs. 2,999</span>
           </div>
-          <div class="flex justify-between text-neutral-400">
+          <div class="flex justify-between text-neutral-400 text-xs">
             <span>Shipping Charge</span>
-            <span class="text-green-400 font-bold text-xs uppercase">FREE</span>
+            <span class="text-green-400 font-bold uppercase">FREE</span>
           </div>
           <hr class="border-neutral-800 my-1">
-          <div class="flex justify-between text-white font-extrabold text-base">
+          <div class="flex justify-between text-white font-extrabold text-sm sm:text-base">
             <span>Total Payable</span>
             <span class="text-red-500">Rs. 2,999</span>
           </div>
         </div>
 
-        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-black text-base py-4 rounded-xl uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-600/20">
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-black text-base py-3.5 rounded-xl uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-600/20">
           Confirm Order via WhatsApp
         </button>
 
