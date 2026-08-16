@@ -10,21 +10,24 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     body {
-      font-family: 'Outfit', sans-serif;
-      background-color: #0b0b0f;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: #08080a;
       color: #f3f4f6;
+    }
+    .glow-red {
+      box-shadow: 0 0 40px -10px rgba(220, 38, 38, 0.35);
     }
   </style>
 </head>
-<body class="antialiased selection:bg-red-600 selection:text-white">
+<body class="antialiased selection:bg-red-600 selection:text-white pb-20 lg:pb-0">
 
   <!-- Top Announcement Bar -->
-  <div class="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white text-xs sm:text-sm py-2.5 px-4 text-center font-bold uppercase tracking-wider shadow-lg">
-    🔥 Special Promotion: 60% OFF + Free Home Delivery All Over Pakistan!
+  <div class="bg-gradient-to-r from-red-700 via-red-600 to-red-700 text-white text-xs sm:text-sm py-2 px-4 text-center font-bold uppercase tracking-wider shadow-lg">
+    🔥 Exclusive Deal: 60% OFF + Free Delivery + Open Parcel Allowed!
   </div>
 
   <!-- Header -->
@@ -33,84 +36,96 @@
       <a href="#" class="text-xl sm:text-2xl font-black tracking-wider text-white">
         AIRBUD<span class="text-red-600">PRO</span>
       </a>
-      <a href="#order-form" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-lg uppercase tracking-wider transition-colors shadow-lg shadow-red-600/30">
+      <a href="#order-form" class="bg-red-600 hover:bg-red-700 text-white font-bold text-xs sm:text-sm px-4 py-2 rounded-lg uppercase tracking-wider transition-all shadow-lg shadow-red-600/30">
         Order Now
       </a>
     </div>
   </header>
 
   <!-- Hero Section -->
-  <section class="relative py-12 lg:py-20 overflow-hidden border-b border-neutral-800">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+  <section class="relative py-10 lg:py-16 border-b border-neutral-800/80">
+    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
       
-      <!-- Visual Carousel / Image -->
-      <div class="relative group">
-        <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-violet-600 rounded-3xl blur-2xl opacity-30 group-hover:opacity-50 transition duration-1000"></div>
-        <div class="relative bg-neutral-900 border border-neutral-800 rounded-2xl p-4 overflow-hidden">
-          <span class="absolute top-6 left-6 bg-red-600 text-white text-xs font-black px-3 py-1.5 rounded-full uppercase z-10">
+      <!-- Main Visual Showcase -->
+      <div class="space-y-4">
+        <div class="relative bg-neutral-900/90 border border-neutral-800 rounded-2xl p-3 overflow-hidden glow-red">
+          <span class="absolute top-4 left-4 bg-red-600 text-white text-[11px] font-black px-3 py-1 rounded-full uppercase z-10 tracking-widest">
             Best Seller
           </span>
-          <img id="main-product-img" src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80" 
+          <img id="main-product-img" src="earbud-main.jpg" 
                alt="AirBud Max Pro" class="w-full h-80 sm:h-96 object-cover rounded-xl transition-all duration-300">
-          
-          <!-- Image Thumbnails -->
-          <div class="grid grid-cols-3 gap-3 mt-4">
-            <img onclick="changeImage('https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80')" 
-                 src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg border-2 border-red-600 cursor-pointer">
-            <img onclick="changeImage('https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=800&q=80')" 
-                 src="https://images.unsplash.com/photo-1606220588913-b3aacb4d2f46?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg border border-neutral-700 hover:border-red-600 cursor-pointer">
-            <img onclick="changeImage('https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?auto=format&fit=crop&w=800&q=80')" 
-                 src="https://images.unsplash.com/photo-1572536147248-ac59a8abfa4b?auto=format&fit=crop&w=300&q=80" class="h-20 w-full object-cover rounded-lg border border-neutral-700 hover:border-red-600 cursor-pointer">
-          </div>
+        </div>
+        
+        <!-- Interactive Thumbnails -->
+        <div class="grid grid-cols-3 gap-3">
+          <img onclick="changeImage('earbud-main.jpg')" 
+               src="earbud-main.jpg" class="h-20 w-full object-cover rounded-lg border-2 border-red-600 cursor-pointer opacity-90 hover:opacity-100 transition-opacity">
+          <img onclick="changeImage('earbud-detail.jpg')" 
+               src="earbud-detail.jpg" class="h-20 w-full object-cover rounded-lg border border-neutral-800 hover:border-red-600 cursor-pointer opacity-75 hover:opacity-100 transition-opacity">
+          <img onclick="changeImage('earbud-white.jpg')" 
+               src="earbud-white.jpg" class="h-20 w-full object-cover rounded-lg border border-neutral-800 hover:border-red-600 cursor-pointer opacity-75 hover:opacity-100 transition-opacity">
         </div>
       </div>
 
-      <!-- Details & Pricing -->
+      <!-- Copywriting & Pricing -->
       <div class="space-y-6">
         <div>
-          <div class="flex items-center space-x-2 text-yellow-500 text-sm font-semibold mb-2">
+          <div class="flex items-center space-x-2 text-yellow-400 text-sm font-semibold mb-2">
             <span>★★★★★</span>
-            <span class="text-neutral-400 text-xs">(148 Customer Reviews)</span>
+            <span class="text-neutral-400 text-xs">(240+ Verified Buyers)</span>
           </div>
           <h1 class="text-3xl sm:text-5xl font-black uppercase tracking-tight text-white leading-tight">
             AirBud Max Pro <span class="text-red-600">ENC</span>
           </h1>
-          <p class="text-neutral-400 mt-3 text-sm sm:text-base">
-            Engineered for high-definition calling & ultra-deep bass. Quad-mic ENC technology eliminates 90% of background noise for crystal clear conversations anywhere.
+          <p class="text-neutral-400 mt-3 text-sm sm:text-base leading-relaxed">
+            Experience studio-grade acoustics, environmental noise cancellation for HD calling, and ultra-low latency mode engineered for gaming and high-fidelity music streaming.
           </p>
         </div>
 
         <!-- Pricing Card -->
-        <div class="bg-neutral-900 border border-neutral-800 p-5 rounded-xl flex items-center justify-between">
+        <div class="bg-neutral-900/80 border border-neutral-800 p-5 rounded-2xl flex items-center justify-between">
           <div>
-            <span class="text-neutral-500 text-xs uppercase font-bold tracking-wider block">Special Promo Price</span>
+            <span class="text-neutral-400 text-xs uppercase font-bold tracking-wider block">Special Promotional Offer</span>
             <div class="flex items-baseline space-x-3 mt-1">
               <span class="text-3xl font-black text-white">Rs. 2,999</span>
-              <span class="text-lg text-neutral-500 line-through font-semibold">Rs. 7,500</span>
+              <span class="text-base text-neutral-500 line-through font-semibold">Rs. 7,500</span>
             </div>
           </div>
-          <span class="bg-green-500/10 text-green-400 border border-green-500/30 text-xs font-extrabold px-3 py-1.5 rounded-md uppercase">
-            Save 60% Today
+          <span class="bg-red-600/10 text-red-500 border border-red-600/30 text-xs font-black px-3 py-1.5 rounded-lg uppercase">
+            60% OFF
           </span>
         </div>
 
-        <!-- Key Highlights -->
-        <div class="grid grid-cols-2 gap-3 text-xs font-semibold uppercase tracking-wider text-neutral-300">
-          <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex items-center gap-2">
-            <span class="text-red-500 text-base">🎙️</span> Quad Mic ENC Calling
+        <!-- Highlight Grid -->
+        <div class="grid grid-cols-2 gap-3 text-xs font-bold uppercase tracking-wider text-neutral-300">
+          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+            <span class="text-red-500 text-base">🎙️</span> Quad Mic ENC
           </div>
-          <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex items-center gap-2">
-            <span class="text-red-500 text-base">🔋</span> 40 Hours Total Playtime
+          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+            <span class="text-red-500 text-base">🔋</span> 40 Hour Battery
           </div>
-          <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex items-center gap-2">
-            <span class="text-red-500 text-base">⚡</span> 40ms Ultra-Low Gaming
+          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+            <span class="text-red-500 text-base">⚡</span> 40ms Low Latency
           </div>
-          <div class="bg-neutral-900/60 p-3 rounded-lg border border-neutral-800 flex items-center gap-2">
-            <span class="text-red-500 text-base">🛡️</span> 1 Year Brand Warranty
+          <div class="bg-neutral-900/60 p-3.5 rounded-xl border border-neutral-800/80 flex items-center gap-2.5">
+            <span class="text-red-500 text-base">🛡️</span> 3-Day Replacement
           </div>
         </div>
 
-        <a href="#order-form" class="block w-full text-center bg-red-600 hover:bg-red-700 text-white font-black text-base py-4 rounded-xl uppercase tracking-wider transition-all transform hover:-translate-y-0.5 shadow-xl shadow-red-600/30">
+        <!-- Trust Badges -->
+        <div class="flex items-center justify-between text-neutral-400 text-xs border-t border-neutral-800/80 pt-4">
+          <div class="flex items-center gap-1.5">
+            <span class="text-green-500">✓</span> Open Parcel First
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-green-500">✓</span> Cash On Delivery
+          </div>
+          <div class="flex items-center gap-1.5">
+            <span class="text-green-500">✓</span> 100% Satisfaction
+          </div>
+        </div>
+
+        <a href="#order-form" class="hidden lg:block w-full text-center bg-red-600 hover:bg-red-700 text-white font-black text-base py-4 rounded-xl uppercase tracking-wider transition-all shadow-xl shadow-red-600/30">
           Order Now — Cash On Delivery
         </a>
       </div>
@@ -122,144 +137,132 @@
   <section class="py-16 bg-neutral-950 border-b border-neutral-800">
     <div class="max-w-6xl mx-auto px-4">
       <div class="text-center max-w-xl mx-auto mb-12">
-        <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight">Why Choose AirBud Max Pro?</h2>
-        <p class="text-neutral-400 text-sm mt-2">Built for high performance, daily commutes, gaming, and crisp calling.</p>
+        <h2 class="text-2xl sm:text-4xl font-black uppercase tracking-tight">Built For Pure Audio Performance</h2>
+        <p class="text-neutral-400 text-sm mt-2">Designed for daily commuters, mobile gamers, and crystal-clear call quality.</p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800 space-y-3">
-          <div class="w-12 h-12 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-xl">01</div>
-          <h3 class="font-bold text-lg text-white uppercase">Quad Mic ENC Noise Cancellation</h3>
-          <p class="text-neutral-400 text-sm">Dual microphones on each bud actively filter background traffic, wind, and crowd noise during phone and video calls.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-neutral-900/80 p-6 rounded-2xl border border-neutral-800 space-y-3">
+          <div class="w-10 h-10 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-lg">01</div>
+          <h3 class="font-bold text-base text-white uppercase">Quad Mic ENC Cancellation</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Dual mics in each earbud isolate human voice and cut ambient traffic noise up to 90% during phone calls.</p>
         </div>
 
-        <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800 space-y-3">
-          <div class="w-12 h-12 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-xl">02</div>
-          <h3 class="font-bold text-lg text-white uppercase">40ms Beast Gaming Mode</h3>
-          <p class="text-neutral-400 text-sm">Triple tap to activate ultra-low latency gaming mode. Zero audio lag for PUBG, Free Fire, and action movies.</p>
+        <div class="bg-neutral-900/80 p-6 rounded-2xl border border-neutral-800 space-y-3">
+          <div class="w-10 h-10 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-lg">02</div>
+          <h3 class="font-bold text-base text-white uppercase">40ms Gaming Low Latency</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Triple-tap activation switches to Beast Gaming Mode for lip-sync sound precision in PUBG and Free Fire.</p>
         </div>
 
-        <div class="bg-neutral-900 p-6 rounded-xl border border-neutral-800 space-y-3">
-          <div class="w-12 h-12 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-xl">03</div>
-          <h3 class="font-bold text-lg text-white uppercase">Type-C Fast Charging</h3>
-          <p class="text-neutral-400 text-sm">Get up to 150 minutes of playback with just 10 minutes of charge via the Type-C quick charging port.</p>
+        <div class="bg-neutral-900/80 p-6 rounded-2xl border border-neutral-800 space-y-3">
+          <div class="w-10 h-10 bg-red-600/10 border border-red-600/20 text-red-500 rounded-lg flex items-center justify-center font-black text-lg">03</div>
+          <h3 class="font-bold text-base text-white uppercase">Type-C Express Charging</h3>
+          <p class="text-neutral-400 text-sm leading-relaxed">Fast charging case gives up to 120 minutes of music playback from a quick 10-minute charge.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Interactive WhatsApp Order Form -->
+  <!-- Interactive Order Form -->
   <section id="order-form" class="py-16 max-w-3xl mx-auto px-4">
-    <div class="bg-neutral-900 border-2 border-red-600/80 rounded-2xl p-6 sm:p-10 shadow-2xl relative">
+    <div class="bg-neutral-900 border-2 border-red-600/70 rounded-3xl p-6 sm:p-10 shadow-2xl relative glow-red">
       
       <div class="text-center space-y-2 mb-8">
         <span class="bg-red-600 text-white text-[10px] font-black px-3 py-1 rounded-full uppercase tracking-wider">
-          Cash On Delivery Available
+          Cash On Delivery Nationwide
         </span>
-        <h2 class="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight">Complete Your Order</h2>
-        <p class="text-neutral-400 text-xs sm:text-sm">Enter your delivery address below to place your order directly via WhatsApp.</p>
+        <h2 class="text-2xl sm:text-4xl font-black uppercase text-white tracking-tight">Place Your Order</h2>
+        <p class="text-neutral-400 text-xs sm:text-sm">Fill in your shipping details below to complete your order via WhatsApp.</p>
       </div>
 
-      <form id="whatsappForm" onsubmit="sendOrderToWhatsApp(event)" class="space-y-5">
+      <form id="whatsappForm" onsubmit="sendOrderToWhatsApp(event)" class="space-y-4">
         
-        <!-- Full Name -->
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-2">Full Name *</label>
-          <input type="text" id="customerName" required placeholder="e.g. Ali Khan" 
-                 class="w-full bg-black border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">Full Name *</label>
+          <input type="text" id="customerName" required placeholder="e.g. Muhammad Usman" 
+                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
         </div>
 
-        <!-- Phone Number -->
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-2">Mobile / WhatsApp Number *</label>
-          <input type="tel" id="customerPhone" required placeholder="e.g. 03001234567" 
-                 class="w-full bg-black border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">WhatsApp Mobile Number *</label>
+          <input type="tel" id="customerPhone" required placeholder="e.g. 03080372554" 
+                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
         </div>
 
-        <!-- City -->
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-2">City *</label>
-          <input type="text" id="customerCity" required placeholder="e.g. Lahore, Karachi, Multan" 
-                 class="w-full bg-black border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">City *</label>
+          <input type="text" id="customerCity" required placeholder="e.g. Lahore, Islamabad, Karachi" 
+                 class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors">
         </div>
 
-        <!-- Complete Address -->
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-2">Complete Delivery Address *</label>
-          <textarea id="customerAddress" rows="3" required placeholder="House/Flat No, Street, Sector/Area..." 
-                    class="w-full bg-black border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors"></textarea>
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">Complete House Address *</label>
+          <textarea id="customerAddress" rows="2" required placeholder="House number, Street, Area/Sector..." 
+                    class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white placeholder-neutral-600 text-sm focus:outline-none focus:border-red-600 transition-colors"></textarea>
         </div>
 
-        <!-- Color Selection -->
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-2">Select Color</label>
-          <select id="productColor" class="w-full bg-black border border-neutral-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-red-600 transition-colors">
+          <label class="block text-xs font-bold uppercase tracking-wider text-neutral-300 mb-1.5">Color Variant</label>
+          <select id="productColor" class="w-full bg-black/80 border border-neutral-800 rounded-xl px-4 py-3.5 text-white text-sm focus:outline-none focus:border-red-600 transition-colors">
             <option value="Matte Black">Matte Black</option>
             <option value="Glossy White">Glossy White</option>
           </select>
         </div>
 
-        <!-- Order Summary Box -->
-        <div class="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-2 text-sm">
+        <!-- Summary -->
+        <div class="bg-neutral-950 p-4 rounded-xl border border-neutral-800 space-y-2 text-sm mt-4">
           <div class="flex justify-between text-neutral-400">
             <span>AirBud Max Pro (x1)</span>
             <span>Rs. 2,999</span>
           </div>
           <div class="flex justify-between text-neutral-400">
-            <span>Delivery Fee</span>
-            <span class="text-green-400 font-semibold uppercase text-xs">FREE</span>
+            <span>Shipping Charge</span>
+            <span class="text-green-400 font-bold text-xs uppercase">FREE</span>
           </div>
-          <hr class="border-neutral-800 my-2">
+          <hr class="border-neutral-800 my-1">
           <div class="flex justify-between text-white font-extrabold text-base">
-            <span>Total Payable Amount</span>
+            <span>Total Payable</span>
             <span class="text-red-500">Rs. 2,999</span>
           </div>
         </div>
 
-        <!-- WhatsApp Submit Button -->
-        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-black text-base py-4 rounded-xl uppercase tracking-wider transition-all flex items-center justify-center gap-3 shadow-xl shadow-green-600/20">
-          <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
-            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/>
-          </svg>
-          Place Order via WhatsApp
+        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-black text-base py-4 rounded-xl uppercase tracking-wider transition-all flex items-center justify-center gap-2 shadow-xl shadow-green-600/20">
+          Confirm Order via WhatsApp
         </button>
 
       </form>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="bg-black border-t border-neutral-900 py-8 text-center text-xs text-neutral-500">
-    <div class="max-w-6xl mx-auto px-4 space-y-2">
-      <p class="font-bold text-neutral-400 uppercase tracking-widest">AirBud Pro Pakistan</p>
-      <p>© 2026 All Rights Reserved. Cash on Delivery Nationwide.</p>
+  <!-- Sticky Bottom Bar for Mobile Conversion -->
+  <div class="fixed bottom-0 left-0 right-0 z-50 lg:hidden bg-black/90 backdrop-blur-md border-t border-neutral-800 p-3 flex items-center justify-between px-4">
+    <div>
+      <span class="text-[10px] text-neutral-400 block uppercase font-bold">Promo Price</span>
+      <span class="text-lg font-black text-white">Rs. 2,999</span>
     </div>
-  </footer>
+    <a href="#order-form" class="bg-red-600 text-white font-black text-xs px-5 py-3 rounded-xl uppercase tracking-wider">
+      Buy Now
+    </a>
+  </div>
 
-  <!-- Order Handler JavaScript -->
   <script>
-    // Gallery Switcher Function
     function changeImage(src) {
       document.getElementById('main-product-img').src = src;
     }
 
-    // Dynamic WhatsApp Order Form Handler
     function sendOrderToWhatsApp(event) {
       event.preventDefault();
 
-      // Collect Form Data
       const name = document.getElementById('customerName').value;
       const phone = document.getElementById('customerPhone').value;
       const city = document.getElementById('customerCity').value;
       const address = document.getElementById('customerAddress').value;
       const color = document.getElementById('productColor').value;
       
-      // Target Phone Number
       const whatsappNumber = "923080372554";
 
-      // Formatted WhatsApp Message Output
       const message = 
-`*NEW ORDER RECEIVED!* 🛒
+`*NEW WEBSITE ORDER!* 🛒
 --------------------------------
 *Product:* AirBud Max Pro ENC
 *Color:* ${color}
@@ -271,14 +274,10 @@
 🏙️ *City:* ${city}
 🏠 *Address:* ${address}
 --------------------------------
-Please confirm my order for dispatch!`;
+Please confirm my order!`;
 
-      // Encode URL Text
       const encodedMessage = encodeURIComponent(message);
-      
-      // Open WhatsApp API Link
-      const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
-      window.open(whatsappURL, '_blank');
+      window.open(`https://wa.me/${whatsappNumber}?text=${encodedMessage}`, '_blank');
     }
   </script>
 
