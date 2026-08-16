@@ -20,7 +20,7 @@
     }
   </style>
 </head>
-<body class="antialiased pb-12">
+<body class="antialiased pb-20 lg:pb-12">
 
   <!-- Top Announcement Bar -->
   <div class="bg-[#d0021b] text-white text-xs sm:text-sm py-2 px-4 text-center font-bold flex items-center justify-center gap-1">
@@ -31,7 +31,7 @@
 
   <!-- Header Navigation -->
   <header class="border-b border-gray-200 bg-white sticky top-0 z-40">
-    <div class="max-w-md mx-auto px-4 h-14 flex items-center justify-between">
+    <div class="max-w-6xl mx-auto px-4 h-14 flex items-center justify-between">
       <a href="#" class="text-xl font-black tracking-tight text-black">
         AIRBUD<span class="text-[#d0021b]">PRO</span>
       </a>
@@ -41,164 +41,179 @@
     </div>
   </header>
 
-  <main class="max-w-md mx-auto px-4 pt-4 space-y-4">
-
-    <!-- Rating & Verification Badge -->
-    <div class="flex items-center space-x-1.5 text-sm font-bold">
-      <span class="text-amber-500">★</span>
-      <span class="text-gray-900">4.8</span>
-      <span class="text-gray-400">|</span>
-      <span class="text-gray-700">2146</span>
-      <span class="bg-emerald-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] ml-1">✓</span>
-    </div>
-
-    <!-- Product Title & Pricing -->
-    <div>
-      <h1 class="text-2xl font-bold text-gray-900 tracking-tight">
-        Airbud Signature S680
-      </h1>
-      <div class="flex items-baseline space-x-2 mt-1">
-        <span class="text-2xl font-extrabold text-gray-900">Rs.2,999</span>
-        <span class="text-sm text-gray-400 line-through font-medium">Rs.14,599</span>
-      </div>
-    </div>
-
-    <!-- Flash Sale Counter Banner -->
-    <div class="bg-black text-white px-3.5 py-2.5 rounded-xl flex items-center justify-between text-xs sm:text-sm font-bold">
-      <div>
-        You saved <span class="text-white">79%</span>
-      </div>
-      <div class="flex items-center gap-1">
-        <span class="text-amber-400">⚡</span>
-        <span>Flash Sale Ending</span>
-        <span id="timer" class="font-extrabold tracking-wider">00h 11m 51s</span>
-      </div>
-    </div>
-
-    <!-- Color Variant Picker -->
-    <div class="space-y-2">
-      <p class="text-sm font-medium text-gray-800">Color: <span id="color-name" class="font-bold text-black">Black</span></p>
-      <div class="grid grid-cols-4 gap-2">
-        <button onclick="selectColor('Black', 'earbud-main.jpg')" class="border-2 border-black rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none">
-          <img src="earbud-main.jpg" alt="Black" class="object-cover h-full w-full rounded">
-        </button>
-        <button onclick="selectColor('White', 'earbud-white.jpg')" class="border border-gray-200 rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none hover:border-gray-400">
-          <img src="earbud-white.jpg" alt="White" class="object-cover h-full w-full rounded">
-        </button>
-        <button onclick="selectColor('Detail', 'earbud-detail.jpg')" class="border border-gray-200 rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none hover:border-gray-400">
-          <img src="earbud-detail.jpg" alt="Detail" class="object-cover h-full w-full rounded">
-        </button>
-        <button onclick="selectColor('Black', 'earbud-main.jpg')" class="border border-gray-200 rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none hover:border-gray-400">
-          <img src="earbud-main.jpg" alt="Black Alt" class="object-cover h-full w-full rounded">
-        </button>
-      </div>
-    </div>
-
-    <!-- Scarcity Badges -->
-    <div class="space-y-2 pt-1">
-      <div class="inline-flex items-center bg-red-50 border-l-4 border-[#d0021b] text-[#d0021b] px-3 py-1.5 rounded-r-md text-xs font-bold">
-        Only 4 products left
-      </div>
-
-      <div class="flex items-center bg-emerald-50 border-l-4 border-emerald-600 text-emerald-800 px-3 py-1.5 rounded-r-md text-xs font-bold gap-2">
-        <span>🛒</span> 3 people added this product to their cart
-      </div>
-
-      <div class="flex items-center bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-xs font-semibold gap-2 w-fit">
-        <span>👁️</span> <span class="font-bold text-black">91</span> people are viewing this right now
-      </div>
-    </div>
-
-    <p class="text-xs text-gray-500 font-medium">Sku: 20946</p>
-
-    <!-- Coupon Unlock Box -->
-    <div class="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-3.5 space-y-1">
-      <p class="text-xs font-extrabold text-gray-900">Unlock Additional 14% OFF Coupon Code</p>
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-2">
-          <span class="text-emerald-600 text-lg">🎟️</span>
-          <span class="bg-[#d0021b] text-white text-xs font-bold px-2.5 py-1 rounded-md">Pakistan</span>
-          <span class="text-xs font-bold text-emerald-700">Click here to Apply</span>
+  <main class="max-w-6xl mx-auto px-4 pt-4 lg:pt-8">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+      
+      <!-- LARGE PRODUCT IMAGE GALLERY (NEW) -->
+      <div class="space-y-4">
+        <div class="border border-gray-200 rounded-2xl p-2 bg-gray-50 overflow-hidden">
+          <img id="mainDisplayImage" src="earbud-main.jpg" alt="Airbud Main View" class="w-full h-80 sm:h-[450px] object-cover rounded-xl transition-all duration-300">
         </div>
-        <span class="text-emerald-700 font-bold text-sm">→</span>
-      </div>
-      <div class="text-[11px] text-gray-600 pt-1">
-        Price after Coupon <span class="font-extrabold text-black text-xs">Rs.2,599</span> <span class="text-gray-500">You'll save additional</span> <span class="text-emerald-700 font-bold">Rs.400</span>
-      </div>
-    </div>
-
-    <p class="text-[11px] text-gray-400 text-center">Your final discounted total will be displayed at checkout.</p>
-
-    <!-- Quantity & Add to Cart Action -->
-    <div class="flex gap-2 pt-1">
-      <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 overflow-hidden">
-        <button onclick="adjustQty(-1)" class="px-3 py-2 text-gray-600 font-bold text-sm hover:bg-gray-200">-</button>
-        <input type="text" id="quantity" value="1" readonly class="w-8 text-center bg-transparent font-bold text-sm text-gray-900 focus:outline-none">
-        <button onclick="adjustQty(1)" class="px-3 py-2 text-gray-600 font-bold text-sm hover:bg-gray-200">+</button>
-      </div>
-      <button onclick="scrollToForm()" class="flex-1 bg-[#111111] hover:bg-black text-white font-bold py-3 px-4 rounded-lg text-sm tracking-wide transition-colors">
-        Add To Cart
-      </button>
-    </div>
-
-    <!-- Buy It Now Button -->
-    <button onclick="scrollToForm()" class="w-full border-2 border-black bg-white hover:bg-gray-50 text-black font-bold py-3 rounded-lg text-sm tracking-wide transition-colors">
-      Buy It Now
-    </button>
-
-    <!-- Trust Features Grid -->
-    <div class="grid grid-cols-2 gap-3 pt-3">
-      <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
-        <div class="flex justify-center text-gray-800 text-2xl">🚚</div>
-        <p class="text-xs font-bold text-gray-900">Free Delivery <span class="font-normal text-gray-500 block">over Rs 2,000</span></p>
       </div>
 
-      <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
-        <div class="flex justify-center text-gray-800 text-2xl">🔄</div>
-        <p class="text-xs font-bold text-gray-900">7 Days <span class="font-normal text-gray-500">Replacement</span></p>
+      <!-- PRODUCT DETAILS & ACTIONS -->
+      <div class="space-y-4">
+        
+        <!-- Rating & Verification Badge -->
+        <div class="flex items-center space-x-1.5 text-sm font-bold">
+          <span class="text-amber-500">★</span>
+          <span class="text-gray-900">4.8</span>
+          <span class="text-gray-400">|</span>
+          <span class="text-gray-700">2146</span>
+          <span class="bg-emerald-500 text-white rounded-full w-4 h-4 flex items-center justify-center text-[10px] ml-1">✓</span>
+        </div>
+
+        <!-- Product Title & Pricing -->
+        <div>
+          <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight">
+            Airbud Signature S680
+          </h1>
+          <div class="flex items-baseline space-x-2 mt-1">
+            <span class="text-2xl sm:text-3xl font-extrabold text-gray-900">Rs.2,999</span>
+            <span class="text-sm text-gray-400 line-through font-medium">Rs.14,599</span>
+          </div>
+        </div>
+
+        <!-- Flash Sale Counter Banner -->
+        <div class="bg-black text-white px-3.5 py-2.5 rounded-xl flex items-center justify-between text-xs sm:text-sm font-bold">
+          <div>
+            You saved <span class="text-white">79%</span>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-amber-400">⚡</span>
+            <span>Flash Sale Ending</span>
+            <span id="timer" class="font-extrabold tracking-wider">00h 11m 51s</span>
+          </div>
+        </div>
+
+        <!-- Color Variant Picker with Interactive Large Image Swap -->
+        <div class="space-y-2">
+          <p class="text-sm font-medium text-gray-800">Color: <span id="color-name" class="font-bold text-black">Black</span></p>
+          <div class="grid grid-cols-4 gap-2.5 max-w-sm">
+            <button onclick="selectColor('Black', 'earbud-main.jpg')" class="border-2 border-black rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none overflow-hidden">
+              <img src="earbud-main.jpg" alt="Black" class="object-cover h-full w-full rounded">
+            </button>
+            <button onclick="selectColor('White', 'earbud-white.jpg')" class="border border-gray-200 rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none hover:border-gray-400 overflow-hidden">
+              <img src="earbud-white.jpg" alt="White" class="object-cover h-full w-full rounded">
+            </button>
+            <button onclick="selectColor('Detail', 'earbud-detail.jpg')" class="border border-gray-200 rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none hover:border-gray-400 overflow-hidden">
+              <img src="earbud-detail.jpg" alt="Detail" class="object-cover h-full w-full rounded">
+            </button>
+            <button onclick="selectColor('Black Alt', 'earbud-main.jpg')" class="border border-gray-200 rounded-lg p-1 aspect-square flex items-center justify-center focus:outline-none hover:border-gray-400 overflow-hidden">
+              <img src="earbud-main.jpg" alt="Black Alt" class="object-cover h-full w-full rounded">
+            </button>
+          </div>
+        </div>
+
+        <!-- Scarcity Badges -->
+        <div class="space-y-2 pt-1">
+          <div class="inline-flex items-center bg-red-50 border-l-4 border-[#d0021b] text-[#d0021b] px-3 py-1.5 rounded-r-md text-xs font-bold">
+            Only 4 products left
+          </div>
+
+          <div class="flex items-center bg-emerald-50 border-l-4 border-emerald-600 text-emerald-800 px-3 py-1.5 rounded-r-md text-xs font-bold gap-2">
+            <span>🛒</span> 3 people added this product to their cart
+          </div>
+
+          <div class="flex items-center bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-xs font-semibold gap-2 w-fit">
+            <span>👁️</span> <span class="font-bold text-black">91</span> people are viewing this right now
+          </div>
+        </div>
+
+        <p class="text-xs text-gray-500 font-medium">Sku: 20946</p>
+
+        <!-- Coupon Unlock Box -->
+        <div class="bg-emerald-50/70 border border-emerald-200 rounded-2xl p-3.5 space-y-1">
+          <p class="text-xs font-extrabold text-gray-900">Unlock Additional 14% OFF Coupon Code</p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-600 text-lg">🎟️</span>
+              <span class="bg-[#d0021b] text-white text-xs font-bold px-2.5 py-1 rounded-md">Pakistan</span>
+              <span class="text-xs font-bold text-emerald-700">Click here to Apply</span>
+            </div>
+            <span class="text-emerald-700 font-bold text-sm">→</span>
+          </div>
+          <div class="text-[11px] text-gray-600 pt-1">
+            Price after Coupon <span class="font-extrabold text-black text-xs">Rs.2,599</span> <span class="text-gray-500">You'll save additional</span> <span class="text-emerald-700 font-bold">Rs.400</span>
+          </div>
+        </div>
+
+        <p class="text-[11px] text-gray-400 text-center">Your final discounted total will be displayed at checkout.</p>
+
+        <!-- Quantity & Add to Cart Action -->
+        <div class="flex gap-2 pt-1">
+          <div class="flex items-center border border-gray-300 rounded-lg bg-gray-50 overflow-hidden">
+            <button onclick="adjustQty(-1)" class="px-3 py-2 text-gray-600 font-bold text-sm hover:bg-gray-200">-</button>
+            <input type="text" id="quantity" value="1" readonly class="w-8 text-center bg-transparent font-bold text-sm text-gray-900 focus:outline-none">
+            <button onclick="adjustQty(1)" class="px-3 py-2 text-gray-600 font-bold text-sm hover:bg-gray-200">+</button>
+          </div>
+          <button onclick="scrollToForm()" class="flex-1 bg-[#111111] hover:bg-black text-white font-bold py-3 px-4 rounded-lg text-sm tracking-wide transition-colors">
+            Add To Cart
+          </button>
+        </div>
+
+        <!-- Buy It Now Button -->
+        <button onclick="scrollToForm()" class="w-full border-2 border-black bg-white hover:bg-gray-50 text-black font-bold py-3 rounded-lg text-sm tracking-wide transition-colors">
+          Buy It Now
+        </button>
+
+        <!-- Trust Features Grid -->
+        <div class="grid grid-cols-2 gap-3 pt-3">
+          <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
+            <div class="flex justify-center text-gray-800 text-2xl">🚚</div>
+            <p class="text-xs font-bold text-gray-900">Free Delivery <span class="font-normal text-gray-500 block">over Rs 2,000</span></p>
+          </div>
+
+          <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
+            <div class="flex justify-center text-gray-800 text-2xl">🔄</div>
+            <p class="text-xs font-bold text-gray-900">7 Days <span class="font-normal text-gray-500">Replacement</span></p>
+          </div>
+
+          <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
+            <div class="flex justify-center text-gray-800 text-2xl">🛡️</div>
+            <p class="text-xs font-bold text-gray-900">1 Year <span class="font-normal text-gray-500">Warranty</span></p>
+          </div>
+
+          <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
+            <div class="flex justify-center text-gray-800 text-2xl">🏆</div>
+            <p class="text-xs font-bold text-gray-900">Award Winning <span class="font-normal text-gray-500 block">Brand</span></p>
+          </div>
+        </div>
+
       </div>
 
-      <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
-        <div class="flex justify-center text-gray-800 text-2xl">🛡️</div>
-        <p class="text-xs font-bold text-gray-900">1 Year <span class="font-normal text-gray-500">Warranty</span></p>
-      </div>
-
-      <div class="border border-gray-300 rounded-xl p-4 text-center space-y-2">
-        <div class="flex justify-center text-gray-800 text-2xl">🏆</div>
-        <p class="text-xs font-bold text-gray-900">Award Winning <span class="font-normal text-gray-500 block">Brand</span></p>
-      </div>
     </div>
 
     <!-- Checkout Form -->
-    <section id="order-form" class="pt-6 pb-8 border-t border-gray-200 mt-6">
-      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 space-y-4">
+    <section id="order-form" class="pt-8 pb-8 border-t border-gray-200 mt-10 max-w-2xl mx-auto">
+      <div class="bg-gray-50 border border-gray-200 rounded-2xl p-5 sm:p-8 space-y-4">
         <div class="text-center">
-          <h2 class="text-lg font-extrabold text-gray-900 uppercase">Complete Your Order</h2>
+          <h2 class="text-xl font-extrabold text-gray-900 uppercase">Complete Your Order</h2>
           <p class="text-xs text-gray-500 mt-0.5">Pay via Cash on Delivery</p>
         </div>
 
         <form onsubmit="sendOrderToWhatsApp(event)" class="space-y-3">
           <div>
             <label class="block text-xs font-bold text-gray-700 mb-1">Full Name *</label>
-            <input type="text" id="customerName" required placeholder="e.g. Muhammad Ali" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black">
+            <input type="text" id="customerName" required placeholder="e.g. Muhammad Ali" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-black">
           </div>
 
           <div>
             <label class="block text-xs font-bold text-gray-700 mb-1">Phone Number *</label>
-            <input type="tel" id="customerPhone" required placeholder="e.g. 03001234567" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black">
+            <input type="tel" id="customerPhone" required placeholder="e.g. 03001234567" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-black">
           </div>
 
           <div>
             <label class="block text-xs font-bold text-gray-700 mb-1">City *</label>
-            <input type="text" id="customerCity" required placeholder="e.g. Lahore" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black">
+            <input type="text" id="customerCity" required placeholder="e.g. Lahore" class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-black">
           </div>
 
           <div>
             <label class="block text-xs font-bold text-gray-700 mb-1">Delivery Address *</label>
-            <textarea id="customerAddress" rows="2" required placeholder="House/Street details..." class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-black"></textarea>
+            <textarea id="customerAddress" rows="2" required placeholder="House/Street details..." class="w-full bg-white border border-gray-300 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-black"></textarea>
           </div>
 
-          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3 rounded-lg text-sm uppercase tracking-wider transition-colors">
+          <button type="submit" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold py-3.5 rounded-lg text-sm uppercase tracking-wider transition-colors">
             Confirm Order (Rs. 2,999)
           </button>
         </form>
@@ -208,7 +223,7 @@
   </main>
 
   <!-- Sticky Bottom Navigation Bar -->
-  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 py-2 px-6 flex justify-between items-center text-center text-xs font-medium text-gray-600">
+  <div class="fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 z-50 py-2 px-6 flex justify-between items-center text-center text-xs font-medium text-gray-600 lg:hidden">
     <a href="#" class="flex flex-col items-center gap-0.5 text-black font-bold">
       <span class="text-base">🏠</span>
       <span>Home</span>
@@ -237,6 +252,7 @@
 
     function selectColor(colorName, imageSrc) {
       document.getElementById('color-name').innerText = colorName;
+      document.getElementById('mainDisplayImage').src = imageSrc;
     }
 
     function scrollToForm() {
